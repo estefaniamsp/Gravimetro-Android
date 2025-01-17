@@ -37,7 +37,7 @@
     <summary>🧩 Integrantes y Contribuciones</summary>
     
     ### 👥 Integrantes y sus roles:
-    
+   >
     - **John Mata**  
       📌 Se encragó del diseño de la interfaz gráfica de la aplicación.  
     - **Samuel Cuti, Anthony Minga y Alan Ríos**  
@@ -52,27 +52,31 @@
     <summary>⚙️ Instrucciones de Configuración y Ejecución</summary>
     
     ### 🛠️ Pasos para ejecutar el proyecto:
-
-    1. **Clonar el repositorio desde GitHub:**  
+>
+    1. **Clonar el repositorio desde GitHub:**
        Ejecuta el siguiente comando en tu terminal:  
        ```bash
        git clone "https://github.com/estefaniamsp/Gravimetro-Android.git"
        ```
 
-    2. **Abrir el proyecto en el entorno de desarrollo:**  
+>
+    2. **Abrir el proyecto en el entorno de desarrollo:**
        Abre el proyecto clonado en el entorno de desarrollo que prefieras (como **Android Studio**).
 
-    3. **Configurar las dependencias:**  
+>
+    3. **Configurar las dependencias:**
        Si es necesario, sincroniza las dependencias del proyecto en Android Studio para asegurarte de que todo esté actualizado.
 
-    4. **Seleccionar dispositivo de ejecución:**  
+>
+    4. **Seleccionar dispositivo de ejecución:**
        - Puedes usar un **emulador** configurado en Android Studio.  
        - También puedes conectar un **dispositivo físico** habilitando la depuración USB en tu móvil.
 
+>
     5. **Compilar y ejecutar:**  
        - Haz clic en el botón **Run** (o presiona `Shift + F10`) para compilar y ejecutar la aplicación.  
        - La aplicación se desplegará en el emulador o dispositivo conectado.
-
+>
 </details>
 
 

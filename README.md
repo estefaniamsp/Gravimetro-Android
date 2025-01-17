@@ -83,5 +83,27 @@
 >
 </details>
 
+<details> 
+   <summary>📱 APK </summary>
+   Puedes descargar el APK para probarlo desde el siguiente enlace:
+ 
+   [Descargar APK](https://github.com/estefaniamsp/Gravimetro-Android/releases/download/preview/app-debug.apk)
+
+</details>
+
+<details> 
+   <summary>📱 Funcionamiento de aplicación </summary>
+
+   - Permisos
+
+     ![image](https://github.com/user-attachments/assets/6592d1f1-fea1-468d-b869-76eefc1c4c32)
+
+   - App
+
+     ![image](https://github.com/user-attachments/assets/bbbc68bd-7e5f-45c8-a12f-bd937ac90ddd)
+
+</details>
+
+
 
 

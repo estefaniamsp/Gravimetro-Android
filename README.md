@@ -39,7 +39,7 @@
     <h3> 
      👥 Integrantes y sus roles: 
     </h3>
-   >
+   
    > - **John Mata**  
    >   📌 Se encragó del diseño de la interfaz gráfica de la aplicación.  
    >- **Samuel Cuti, Anthony Minga y Alan Ríos**  
@@ -56,7 +56,7 @@
     <h3>
      🛠️ Pasos para ejecutar el proyecto: 
     </h3>
->
+
 >    1. **Clonar el repositorio desde GitHub:**
 >       Ejecuta el siguiente comando en tu terminal:  
 >       ```bash

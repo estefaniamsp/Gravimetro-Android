@@ -35,7 +35,7 @@
 
 <details> 
     <summary>🧩 Integrantes y Contribuciones</summary>
-    
+   > 
     <h3> 
      👥 Integrantes y sus roles: 
     </h3>
@@ -52,7 +52,7 @@
 
 <details> 
     <summary>⚙️ Instrucciones de Configuración y Ejecución</summary>
-    
+   > 
     <h3>
      🛠️ Pasos para ejecutar el proyecto: 
     </h3>

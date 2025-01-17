@@ -1,6 +1,9 @@
 package com.emspexample.gravimetro
 
 import android.os.Bundle
+import android.Manifest
+import android.content.pm.PackageManager
+import android.location.Location
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,9 +12,12 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.location.LocationListener
+import android.location.LocationManager
 import android.widget.TextView
+import androidx.core.app.ActivityCompat
 
-class MainActivity : AppCompatActivity(), SensorEventListener {
+class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener {
 
     private lateinit var sensorManager: SensorManager
     private var gravitySensor: Sensor? = null
@@ -19,6 +25,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var tvX: TextView
     private lateinit var tvY: TextView
     private lateinit var tvZ: TextView
+    private lateinit var tvLatitude: TextView
+    private lateinit var tvLongitude: TextView
+
+    private lateinit var locationManager: LocationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +37,27 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         tvX = findViewById(R.id.tv_x)
         tvY = findViewById(R.id.tv_y)
         tvZ = findViewById(R.id.tv_z)
+        tvLatitude = findViewById(R.id.tv_latitude)
+        tvLongitude = findViewById(R.id.tv_longitude)
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
 
         gravitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)
         if(gravitySensor==null){
             tvX.text = "Sensor de gravedad no disponible"
 
         }
+
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+            ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), 1)
+            return
+        }
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, this)
+
     }
         override fun onResume() {
             super.onResume()

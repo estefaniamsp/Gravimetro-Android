@@ -36,7 +36,9 @@
 <details> 
     <summary>🧩 Integrantes y Contribuciones</summary>
     
-    <h3> 👥 Integrantes y sus roles: </h3>
+    <h3> 
+     👥 Integrantes y sus roles: 
+    </h3>
    >
    > - **John Mata**  
    >   📌 Se encragó del diseño de la interfaz gráfica de la aplicación.  
@@ -51,7 +53,9 @@
 <details> 
     <summary>⚙️ Instrucciones de Configuración y Ejecución</summary>
     
-    <h3>🛠️ Pasos para ejecutar el proyecto: </h3>
+    <h3>
+     🛠️ Pasos para ejecutar el proyecto: 
+    </h3>
 >
 >    1. **Clonar el repositorio desde GitHub:**
 >       Ejecuta el siguiente comando en tu terminal:  

@@ -17,7 +17,7 @@ import android.location.LocationManager
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
 
-class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener {
+abstract class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener {
 
     private lateinit var sensorManager: SensorManager
     private var gravitySensor: Sensor? = null
@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener 
         gravitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)
         if(gravitySensor==null){
             tvX.text = "Sensor de gravedad no disponible"
-
         }
 
 
@@ -68,6 +67,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener 
         override fun onPause() {
             super.onPause()
             sensorManager.unregisterListener(this)
+            locationManager.removeUpdates(this)
 
         }
 
@@ -84,6 +84,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener, LocationListener 
     }
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
         //
+    }
+
+    override fun onLocationChanged(location: Location) {
+        val latitude = location.latitude
+        val longitude = location.longitude
+        tvLatitude.text = "Latitude: $latitude"
+        tvLongitude.text = "Longitude: $longitude"
     }
 
 }
